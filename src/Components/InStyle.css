@@ -1,0 +1,210 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Tektur:wght@500&display=swap');
+
+/* SearchCity */
+.searchCon {
+    background-color: var(--col2);
+    width: 30%; overflow: hidden;
+    border: 0.3rem solid var(--col1); border-radius: 3rem;
+    position: absolute; top: 15%; left: 50%; translate: -50%;
+    padding: 0.5rem;
+    transition: 2s all ease-in;
+}
+.searchCon:hover {
+    width: 75%;
+}
+.search {
+    width: 0;
+    border-radius: 3rem; border: none; outline: none;
+    margin-left: 30px;
+    font-size: 1.5rem;
+    transition: 2s all 0.5s;
+    text-align: center;
+}
+.searchCon:hover .search {
+    width: 68%;
+    color: var(--col1); caret-color: var(--col2);
+}
+.search::placeholder {
+    color: var(--col1);
+    text-align: center;
+}
+.searchIcon {
+    position: absolute;
+    z-index: 1;
+}
+.sBtn {
+    z-index: 0;
+    position: absolute;
+    right: -0.2rem; top: -0.08rem;
+}
+.sBtn button {
+    border-radius: 0 3rem 3rem 0;
+}
+
+
+/*Detail*/
+
+.detCon {
+    width: 100%;
+}
+[class^=detBox] {
+    background-color: transparent;
+    position: absolute; top: 30%; 
+    border: 0.3rem solid var(--col1); border-radius: 2rem 2rem;
+    min-height: 65%;
+    padding: 1.5rem;
+}
+.detBoxP {
+    width: 65%;
+    left: 0;
+    border-right: none;
+    color: var(--col2);
+    font-family: 'Roboto Slab', serif;
+}
+.detBoxS {
+    width: 35%;
+    right: 0;
+    color: var(--col2);
+    font-family: 'Tektur', cursive;
+}
+
+/*PrimaryDeatil*/
+.mainIcon {
+    position: absolute;
+    top: 7%;
+    left: 50%; translate: -50% 0;
+    font-size: 6rem;
+}
+.mainDet h1 {
+    margin: 0.5rem;
+}
+.mainDet .com {
+    position: absolute;
+    width: 50%;
+}
+.mainDet .temp {
+    top: 43%; left: 2%;
+}
+.mainDet .temp .tempIcon {
+    float: left;
+}
+.mainDet .sec {
+    top: 37%; right: 5%;
+    text-align: right;
+}
+.mainDet .timeSec {
+    width: 100%;
+    bottom: 4%; left: 0;
+    text-align: center;
+}
+
+/*SecondaryDetail*/
+.item {
+    position: absolute;
+    left: 0;
+    font-size: 0.5rem;
+    width: 100%;
+    letter-spacing: 0.1rem;
+}
+.i0 {
+    top: 8%;
+}
+.i1 {
+    top: 30%;
+}
+.i2 {
+    top: 55%;
+}
+.i3 {
+    top: 80%;
+}
+.item .icon {
+    position: absolute;
+    left: 5%;
+    width: 30%;
+}
+.item .iDesc {
+    position: absolute;
+    right: 8%;
+    text-align: center;
+    width: 60%;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .container {
+        padding-top: 1rem;
+        margin: 5rem 0;
+        width: 90vw;
+    }
+    .container:hover {
+        width: 90vw;
+    }
+    .container > h1 {
+        position: static;
+        translate: 0;
+        margin-bottom: 1rem;
+    }
+    .searchCon {
+        position: static;
+        display: block;
+        margin: 0 auto;
+        translate: 0;
+    }
+    .sBtn {
+        display: none;
+        height: 100%;
+    }
+    .searchCon:hover {
+        width: 90%;
+    }
+    .searchCon:focus-within .sBtn {
+        display: block;
+    }
+    .search {
+        font-size: 1rem;
+    }
+    .detBoxP {
+        margin-top: 2rem;
+        position: static;
+        top: 30%;
+        width: 100%; 
+        border: 0.3rem solid var(--col1); border-radius: 2rem 2rem;  
+        border-bottom: none;     
+    }
+    .detBoxS {
+        top: 200%;
+        position: relative;
+        height: 20rem;
+        width: 100%;
+    }
+    .mainIcon {
+        position: static;
+        translate: 0 0;
+        font-size: 3rem;
+        text-align: center;
+        display: block;
+    }
+    .mainDet .com {
+        position: static;
+        width: 50%;
+        font-size: 0.7rem;
+        margin: 1.5rem 0;
+    }
+    .mainDet .temp {
+        float: left;
+    }
+    .mainDet .sec {
+        float: right;
+    }
+    .mainDet .timeSec {
+        clear: both;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+
+
+
