@@ -8,6 +8,8 @@
     border: 0.3rem solid var(--col1); border-radius: 3rem;
     position: absolute; top: 15%; left: 50%; translate: -50%;
     padding: 0.5rem;
+    -webkit-transition: 2s all ease-in;
+    -o-transition: 2s all ease-in;
     transition: 2s all ease-in;
 }
 .searchCon:hover {
@@ -18,12 +20,30 @@
     border-radius: 3rem; border: none; outline: none;
     margin-left: 30px;
     font-size: 1.5rem;
+    -webkit-transition: 2s all 0.5s;
+    -o-transition: 2s all 0.5s;
     transition: 2s all 0.5s;
     text-align: center;
 }
 .searchCon:hover .search {
     width: 68%;
     color: var(--col1); caret-color: var(--col2);
+}
+.search::-webkit-input-placeholder {
+    color: var(--col1);
+    text-align: center;
+}
+.search::-moz-placeholder {
+    color: var(--col1);
+    text-align: center;
+}
+.search:-ms-input-placeholder {
+    color: var(--col1);
+    text-align: center;
+}
+.search::-ms-input-placeholder {
+    color: var(--col1);
+    text-align: center;
 }
 .search::placeholder {
     color: var(--col1);
@@ -204,7 +224,6 @@
         width: 100%;
     }
 }
-
 
 
 
